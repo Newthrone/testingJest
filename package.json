@@ -1,0 +1,25 @@
+{
+  "name": "jestLearn",
+  "version": "1.0.0",
+  "description": "Jest intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "jest",
+    "unit",
+    "resting"
+  ],
+  "author": "Vyacheslav",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.8",
+    "jest": "^26.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
