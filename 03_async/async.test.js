@@ -2,6 +2,7 @@ const axios = require('axios')
 const Ajax = require('./async')
 
 jest.mock('axios')
+console.dir(jest)
 
 describe('Ajax: echo', () => {
   test('should return value async', async () => {

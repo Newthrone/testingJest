@@ -1,3 +1,5 @@
+const jest = require('jest-cli')
+
 const axios = require('axios')
 
 class Ajax {
@@ -16,7 +18,6 @@ class Ajax {
   static async get(){
     try {
       const responce = await axios.get('https://jsonplaceholder.typecode.com/todos')
-      console.log('responce', responce)
       return responce.data
     } catch(e) {
       console.log(e);
@@ -25,3 +26,22 @@ class Ajax {
 }
 
 module.exports = Ajax
+
+todos = [
+  {id: 1, title: 'Todo 1', completed: false}
+]
+responce = {
+  data: {
+    todos
+  }
+}
+
+console.log(jest)
+jest.mock('axios')
+
+axios.get.mockReturnValue(responce)
+console.log(Ajax.get())
+// return Ajax.get().then(data => {
+
+//   console.log(Ajax.get())
+// })
